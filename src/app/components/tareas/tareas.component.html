@@ -3,12 +3,13 @@
     <button (click)="addTarea()">Crear</button>
 </section>
 
-<p *ngIf="tareas.length == 0">No hay tareas</p>
+<p class="no-tareas" *ngIf="tareas.length == 0">No hay tareas</p>
 
 <section *ngIf="tareas.length > 0" class="tareas-sect">
     <article *ngFor="let tarea of tareas" class="tarea">
-        <span (click)="deleteTarea(tarea)">Borrar</span>
+        <img style="cursor: pointer;" width="20" (click)="updateTarea(tarea)"
+            src="../../../assets/img/{{tarea.estado == false ? 'circle' : 'check'}}.png" alt="">
         <p>{{tarea.descripcion}}</p>
-        <span (click)="updateTarea(tarea)">{{tarea.estado == false ? "No completado" : "Completado"}}</span>
+        <span (click)="deleteTarea(tarea)" style="cursor: pointer;">🗑️</span>
     </article>
 </section>

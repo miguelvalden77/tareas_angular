@@ -4,8 +4,8 @@ export class Tarea {
     estado: boolean
 
     constructor(descripcion: string, estado: boolean) {
-        this.descripcion = descripcion,
-            this.estado = estado
+        this.descripcion = descripcion
+        this.estado = estado
     }
 
 }

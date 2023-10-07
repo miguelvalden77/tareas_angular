@@ -14,7 +14,7 @@ export class TareasComponent {
   addTarea() {
     if (this.currentValue.trim() == "") return
     const tarea = new Tarea(this.currentValue, false)
-    this.tareas.push(tarea)
+    this.tareas.unshift(tarea)
     this.currentValue = ""
   }
 
