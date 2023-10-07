@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("./assets/img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.main-input {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.main-input input,
+button {
+    height: 3rem;
+    border: none;
+}
+
+.main-input button {
+    width: 80px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.main-input input {
+    width: 300px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    padding-inline: 1rem;
+    font-size: 1.2rem;
+    display: grid;
+    text-align: center;
+}
+
+.tareas-sect {
+    display: flex;
+    justify-content: center;
+}
+
+.tarea {
+    background-color: ghostwhite;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+}

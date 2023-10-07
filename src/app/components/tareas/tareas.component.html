@@ -1,12 +1,14 @@
-<input type="text" [(ngModel)]="currentValue">
-<button (click)="addTarea()">Crear</button>
+<section class="main-input">
+    <input type="text" [(ngModel)]="currentValue" placeholder="Nueva tarea ...">
+    <button (click)="addTarea()">Crear</button>
+</section>
 
 <p *ngIf="tareas.length == 0">No hay tareas</p>
 
-<section *ngIf="tareas.length > 0">
-    <article *ngFor="let tarea of tareas">
-        <p>{{tarea.descripcion}}</p>
+<section *ngIf="tareas.length > 0" class="tareas-sect">
+    <article *ngFor="let tarea of tareas" class="tarea">
         <span (click)="deleteTarea(tarea)">Borrar</span>
+        <p>{{tarea.descripcion}}</p>
         <span (click)="updateTarea(tarea)">{{tarea.estado == false ? "No completado" : "Completado"}}</span>
     </article>
 </section>

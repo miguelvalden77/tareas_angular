@@ -12,7 +12,7 @@ export class TareasComponent {
   currentValue: string = ""
 
   addTarea() {
-    console.log(this.currentValue)
+    if (this.currentValue.trim() == "") return
     const tarea = new Tarea(this.currentValue, false)
     this.tareas.push(tarea)
     this.currentValue = ""
