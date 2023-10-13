@@ -8,7 +8,7 @@
 <section *ngIf="tareas.length > 0" class="tareas-sect">
     <article *ngFor="let tarea of tareas" class="tarea">
         <img style="cursor: pointer;" width="20" (click)="updateTarea(tarea)"
-            src="../../../assets/img/{{tarea.estado == false ? 'circle' : 'check'}}.png" alt="">
+            src="assets/img/{{tarea.estado == false ? 'circle' : 'check'}}.png" alt="">
         <p>{{tarea.descripcion}}</p>
         <span (click)="deleteTarea(tarea)" style="cursor: pointer;">🗑️</span>
     </article>
